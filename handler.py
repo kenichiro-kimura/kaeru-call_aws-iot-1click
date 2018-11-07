@@ -51,7 +51,7 @@ def sendmsg(event, context):
             layout='vertical',
             contents=[
                 TextComponent(
-                    text=babyname+alttext,
+                    text=alttext,
                     weight='bold',
                     size='lg'
                 )
