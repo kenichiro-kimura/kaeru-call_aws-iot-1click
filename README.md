@@ -31,7 +31,7 @@ AWSのアカウントの作り方などの詳細は適宜調べてください。
   ```bash
   %pip install -r requirements.txt -t ./
   ```
-- クリックしたときにLINEに送られるめっせーじ
+- クリックしたときにLINEに送られるメッセージをconfig.iniに記載する
 - クリックしたときにLINEに送られるCGを3種類準備し、どこかhttpsでアクセスできるところに置き、URLとファイル名をconfig.iniに記載する
 - 取りあえずデプロイする
   ```bash
