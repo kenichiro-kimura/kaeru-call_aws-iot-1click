@@ -1,0 +1,20 @@
+service: babycounter
+provider:
+  name: aws
+  runtime: python2.7
+  stage: dev
+  region: ap-northeast-1
+
+functions:
+  sendmsg:
+    handler: handler.sendmsg
+    
+  hello:
+    handler: handler.hello
+    events:
+     - http:
+          path: babycounter
+          method: get
+     - http:
+          path: babycounter
+          method: post
