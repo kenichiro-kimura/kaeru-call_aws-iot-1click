@@ -33,13 +33,13 @@ def sendmsg(event, context):
     deviceId = event['deviceInfo']['deviceId']
     clickType = event['deviceEvent']['buttonClicked']['clickType']
     
-    alttext = u"帰るね"
+    alttext = inifile.get('message','shortmsg');
     cgfile = inifile.get('s3','shortcg');
     if(clickType == "DOUBLE"):
-        alttext = u"急いで帰るね"
+        alttext = inifile.get('message','doublemsg');
         cgfile = inifile.get('s3','doublecg');
     if(clickType == "LONG"):
-        alttext = u"ごめん、遅くなります"
+        alttext = inifile.get('message','longmsg');
         cgfile = inifile.get('s3','longcg');
 
     flex = BubbleContainer(
